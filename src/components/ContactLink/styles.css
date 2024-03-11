@@ -1,0 +1,31 @@
+@keyframes pulsate {
+    0%, 100% {
+      transform: scale(1); /* Estado inicial e final: o botão está no tamanho normal */
+    }
+    50% {
+      transform: scale(1.05); /* No meio da animação, o botão cresce 5% */
+    }
+  }
+
+a.contact-link {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #27A033;
+    padding: 0.8rem;
+    border-radius: 50%;
+    animation: pulsate 2s infinite ease-in-out;
+
+
+    @media(max-width: 768px){
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.8rem;
+        /* width: 60px;; */
+
+        svg {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
